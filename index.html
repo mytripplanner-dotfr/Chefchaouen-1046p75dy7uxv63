@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Évasion Bleue de Chefchaouen </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et premières touches de bleu</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion au cœur de la Médina bleue</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Panoramas et sources naturelles</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Artisanat et saveurs locales</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Évasion naturelle à Akchour</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Détente et exploration photographique</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Marché local et saveurs authentiques</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Derniers souvenirs et adieux bleus</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Départ de la ville bleue</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">CHEFCHAOUEN</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Évasion Bleue de Chefchaouen</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 9 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2650€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 28h depuis Julien, haiti avec escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et premières touches de bleu</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, l'arrivée à Chefchaouen est une bouffée d'air frais. Installez-vous tranquillement et laissez-vous imprégner par l'atmosphère unique de la ville bleue. Une balade légère en fin de journée sera parfaite pour une première découverte sans précipitation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Transfert vers Chefchaouen</strong>: Après l'atterrissage à Tanger, un grand taxi ou un bus vous mènera à travers les montagnes du Rif jusqu'à la ville bleue, un trajet pittoresque d'environ 2h30.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Prenez le temps de vous installer dans votre hôtel 3 étoiles, de vous rafraîchir et de vous détendre après le voyage. Profitez de l'ambiance sereine de votre hébergement.</li><li>🚶‍♂️ <strong>Première balade dans la Médina</strong>: Une courte promenade en fin d'après-midi pour sentir l'énergie de la médina. Laissez-vous guider par les ruelles bleues et admirez les façades uniques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil d'arrivée</p>
+                                <p class="text-gray-700">Pré-réservez votre transfert de Tanger à Chefchaouen pour une arrivée plus sereine. Les "grands taxis" sont une option confortable et partagée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Monnaie locale</p>
+                                <p class="text-gray-700">La monnaie est le Dirham marocain (MAD). Prévoyez un peu de liquide pour les petits achats et les pourboires, bien que les cartes soient acceptées dans de nombreux endroits.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion au cœur de la Médina bleue</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de la médina de Chefchaouen, un labyrinthe de ruelles peintes en bleu et blanc. Chaque coin de rue révèle une nouvelle perspective, un détail architectural ou une scène de vie locale. Laissez-vous charmer par l'authenticité de ce lieu hors du temps.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏰 <strong>Visite de la Kasbah et de son musée</strong>: Explorez l'ancienne forteresse du 18ème siècle, un havre de paix au cœur de la médina. Son musée ethnographique offre un aperçu fascinant de l'histoire et de la culture locale.</li><li>🚶‍♀️ <strong>Exploration des ruelles emblématiques</strong>: Perdez-vous volontairement dans les célèbres ruelles bleues comme la rue "El Assri". C'est l'occasion parfaite pour des photos mémorables et pour découvrir des boutiques d'artisans cachées.</li><li>☕ <strong>Pause sur la Place Outa el Hammam</strong>: Détendez-vous sur la place principale, le cœur battant de Chefchaouen. Savourez un thé à la menthe en observant l'animation locale, avec la Grande Mosquée et la Kasbah en toile de fond.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Astuce photo</p>
+                                <p class="text-gray-700">Les meilleures heures pour photographier la médina sont tôt le matin ou en fin d'après-midi, lorsque la lumière est douce et les rues moins fréquentées.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶 Chaussures confortables</p>
+                                <p class="text-gray-700">Prévoyez des chaussures confortables car vous marcherez beaucoup sur des pavés et des pentes. La médina est un terrain de jeu pour les pieds!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Panoramas et sources naturelles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'exploration urbaine, prenez de la hauteur pour admirer Chefchaouen sous un autre angle. La nature environnante offre des vues imprenables et des lieux de fraîcheur. Une journée entre effort doux et récompense visuelle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🕌 <strong>Randonnée à la Mosquée Espagnole</strong>: Montez jusqu'à cette mosquée abandonnée pour un panorama spectaculaire sur toute la ville bleue, surtout au coucher du soleil. La vue est à couper le souffle et l'effort en vaut la peine.</li><li>💧 <strong>Visite de Ras El Maa</strong>: Découvrez la source d'eau naturelle de Ras El Maa, où les femmes lavent leur linge et les habitants se rafraîchissent. C'est un lieu de vie authentique et paisible, juste à la sortie de la médina.</li><li>🍽️ <strong>Dîner avec vue</strong>: Choisissez un restaurant avec terrasse offrant une vue sur la médina illuminée. C'est une expérience magique pour clôturer la journée, savourant des plats locaux sous les étoiles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌅 Coucher de soleil</p>
+                                <p class="text-gray-700">Le coucher de soleil depuis la Mosquée Espagnole est un incontournable. Prévoyez d'y arriver environ 45 minutes avant pour trouver une bonne place.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">N'oubliez pas d'emporter de l'eau, surtout si vous faites la randonnée vers la Mosquée Espagnole. Le soleil peut être intense.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Artisanat et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Immergez-vous dans l'artisanat local et la gastronomie marocaine. Cette journée est dédiée à la découverte des talents des artisans de Chefchaouen et à l'apprentissage des secrets de sa cuisine savoureuse. Une expérience sensorielle et enrichissante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Découverte des souks et ateliers d'artisans</strong>: Flânez dans les souks où vous trouverez des produits uniques comme des tapis berbères, des poteries, des vêtements en laine et des articles en cuir. N'hésitez pas à observer les artisans au travail.</li><li>🖼️ <strong>Visite de galeries d'art locales</strong>: Chefchaouen attire de nombreux artistes. Explorez les petites galeries qui exposent des œuvres inspirées par la ville bleue et les paysages du Rif. C'est une belle façon de soutenir l'art local.</li><li>🧑‍🍳 <strong>Cours de cuisine marocaine</strong>: Participez à un atelier pour apprendre à préparer des plats traditionnels comme le tajine ou le couscous. C'est une expérience interactive et délicieuse qui vous permettra de ramener un peu du Maroc chez vous.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> bargaining Négociation</p>
+                                <p class="text-gray-700">La négociation est une tradition dans les souks. N'hésitez pas à marchander poliment pour obtenir le meilleur prix, c'est une partie de l'expérience.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Spécialités locales</p>
+                                <p class="text-gray-700">Goûtez au "bissara" (soupe de fèves) pour le petit-déjeuner et au "brochettes" (brochettes de viande) pour un repas rapide et savoureux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion naturelle à Akchour</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation de la ville pour une journée d'aventure en pleine nature. Les cascades et le Pont de Dieu d'Akchour offrent un cadre idyllique pour la randonnée et la baignade. Une bouffée d'air frais et des paysages à couper le souffle vous attendent.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Excursion vers Akchour</strong>: Prenez un grand taxi partagé depuis Chefchaouen pour rejoindre Akchour, situé à environ 45 minutes. Le trajet offre déjà de superbes vues sur les montagnes du Rif.</li><li>🚶‍♀️ <strong>Randonnée aux cascades d'Akchour</strong>: Partez en randonnée le long de la rivière pour découvrir les magnifiques cascades. Il existe plusieurs niveaux de difficulté, des petites cascades accessibles aux grandes cascades nécessitant plus d'effort.</li><li>🌉 <strong>Découverte du Pont de Dieu</strong>: Pour les plus aventureux, continuez la randonnée jusqu'au "Pont de Dieu", une arche rocheuse naturelle impressionnante. Prévoyez de bonnes chaussures et de l'eau.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏊 Baignade</p>
+                                <p class="text-gray-700">N'oubliez pas votre maillot de bain! Les piscines naturelles au pied des cascades sont parfaites pour se rafraîchir après la randonnée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥪 Repas sur place</p>
+                                <p class="text-gray-700">De petits restaurants locaux le long du chemin proposent des tajines et des brochettes. C'est une excellente option pour un déjeuner authentique en pleine nature.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente et exploration photographique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'aventure d'Akchour, cette journée est dédiée à la détente et à l'approfondissement de votre exploration de Chefchaouen. Prenez le temps de capturer l'essence de la ville à travers votre objectif et de vous offrir un moment de bien-être traditionnel.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Matinée libre et café local</strong>: Profitez d'une matinée tranquille pour vous reposer, lire un livre ou simplement savourer un café marocain dans un des charmants cafés de la médina. Observez la vie locale s'éveiller.</li><li>📸 <strong>Balade photographique thématique</strong>: Choisissez un thème (portes, chats, détails architecturaux) et partez à la chasse aux images. Chefchaouen est un paradis pour les photographes, chaque ruelle offre une nouvelle inspiration.</li><li>🧖‍♀️ <strong>Expérience Hammam traditionnel</strong>: Offrez-vous un moment de relaxation et de purification dans un hammam public ou privé. C'est une expérience culturelle authentique pour se détendre et se ressourcer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐈 Les chats de Chefchaouen</p>
+                                <p class="text-gray-700">La ville est réputée pour ses nombreux chats. Ils font partie intégrante du paysage et sont souvent très photogéniques. N'hésitez pas à les immortaliser!</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧼 Hammam</p>
+                                <p class="text-gray-700">Si vous optez pour un hammam public, prévoyez votre propre serviette, savon noir et gant de "kessa". Pour une expérience plus douce, un hammam privé est une bonne alternative.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Marché local et saveurs authentiques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'effervescence du marché local, un véritable festival de couleurs, d'odeurs et de sons. C'est l'occasion de découvrir les produits frais de la région et de goûter à la cuisine de rue. Une journée pour éveiller vos sens et vous connecter à la vie quotidienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🥕 <strong>Visite du marché hebdomadaire (si jour de marché)</strong>: Si votre séjour coïncide avec le jour de marché (généralement le lundi ou le jeudi), ne manquez pas cette expérience vibrante. Vous y trouverez des produits frais, des épices et de l'artisanat local.</li><li>🌶️ <strong>Dégustation de street food</strong>: Laissez-vous tenter par les délices de la cuisine de rue. Goûtez aux "harira" (soupe), aux "msemen" (crêpes) ou aux pâtisseries locales. C'est une façon économique et savoureuse de manger.</li><li>📖 <strong>Soirée contes et légendes</strong>: Cherchez un café ou un riad proposant des soirées contes. C'est une tradition marocaine fascinante qui vous plongera dans l'imaginaire local et les récits du Rif.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗓️ Jours de marché</p>
+                                <p class="text-gray-700">Renseignez-vous sur les jours de marché locaux à votre arrivée. C'est une expérience authentique à ne pas manquer pour observer la vie locale.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Quelques mots d'arabe</p>
+                                <p class="text-gray-700">Apprendre quelques mots comme "Salam Alikoum" (bonjour) ou "Choukran" (merci) sera très apprécié par les habitants et facilitera les échanges.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers souvenirs et adieux bleus</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète pour flâner une dernière fois dans vos endroits préférés, dénicher les derniers souvenirs et savourer l'ambiance unique de Chefchaouen. Une journée pour graver ces moments bleus dans votre mémoire avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Shopping de dernière minute</strong>: Retournez dans les souks pour acheter les cadeaux et souvenirs que vous n'avez pas encore trouvés. Les couvertures en laine, les babouches et les épices sont des incontournables.</li><li>☕ <strong>Revisiter un café ou un point de vue préféré</strong>: Prenez le temps de vous asseoir dans votre café favori ou de retourner à un point de vue qui vous a marqué. Imprégnez-vous une dernière fois de l'atmosphère.</li><li> farewell <strong>Dîner d'adieu avec musique locale</strong>: Choisissez un restaurant offrant de la musique traditionnelle marocaine pour votre dernier dîner. C'est une belle façon de célébrer votre voyage et de dire au revoir à Chefchaouen.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📦 Bagages</p>
+                                <p class="text-gray-700">Pensez à la place dans vos bagages pour vos souvenirs. Certains articles peuvent être volumineux, comme les tapis.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⭐ Avis et pourboires</p>
+                                <p class="text-gray-700">Si vous avez apprécié un service ou un restaurant, n'hésitez pas à laisser un pourboire ou un avis positif. C'est toujours très apprécié.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de la ville bleue</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de quitter la magnifique ville bleue de Chefchaouen. Après un dernier petit-déjeuner marocain, vous prendrez la route vers l'aéroport de Tanger, emportant avec vous des souvenirs inoubliables de ce voyage enchanteur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🥐 <strong>Dernier petit-déjeuner marocain</strong>: Savourez un dernier petit-déjeuner composé de "harcha", "baghrir" et thé à la menthe. C'est une douce manière de dire au revoir à la gastronomie locale.</li><li>🚗 <strong>Transfert vers l'aéroport de Tanger</strong>: Organisez votre transfert retour vers l'aéroport de Tanger (TNG) en grand taxi ou en bus. Prévoyez suffisamment de temps pour le trajet et les formalités aéroportuaires.</li><li>🛫 <strong>Vol retour</strong>: Embarquement pour votre vol retour, la tête remplie d'images bleues et de souvenirs précieux de votre aventure marocaine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Chefchaouen-1046p75dy7uxv63/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Confirmez l'heure de votre transfert la veille et assurez-vous d'avoir une marge confortable pour éviter tout stress lié au départ.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Formalités</p>
+                                <p class="text-gray-700">Vérifiez les exigences de votre compagnie aérienne concernant les bagages et les documents de voyage avant de partir pour l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1600€/pers (Vol A/R Julien, Haïti - Tanger en classe économique avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>230€/pers (Transferts aéroport, taxis locaux, excursion Akchour)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>270€/pers (3 repas/jour, budget moyen, incluant quelques extras)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>400€/pers (8 nuits en hôtel 3 étoiles)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>150€/pers (Entrées sites, cours de cuisine, hammam, imprévus)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois d'avril, mai, septembre et octobre.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🤝 La population de Chefchaouen est majoritairement berbère et arabe, réputée pour son hospitalité et sa gentillesse. Un sourire et quelques mots d'arabe ouvriront bien des portes.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌍 Le Maroc est un pays d'Afrique du Nord, connu pour sa culture riche, ses paysages variés et son histoire millénaire. Chefchaouen est un joyau niché dans les montagnes du Rif.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💙 L'origine de la couleur bleue de Chefchaouen est sujette à plusieurs théories: pour repousser les moustiques, pour symboliser le ciel et le paradis, ou par tradition juive. Quelle que soit la raison, elle est devenue son identité.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🐈 Chefchaouen est également surnommée la "ville des chats". Vous en croiserez à chaque coin de rue, faisant partie intégrante du charme local.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Chefchaouen-1046p75dy7uxv63/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.visitmorocco.com/fr" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Morocco</strong></a></li>
+                    
+                        <li><a href="https://www.meteomaroc.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Maroc</strong></a></li>
+                    
+                        <li><a href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=EUR&To=MAD" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>💱 XE Currency Converter</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
