@@ -1,0 +1,307 @@
+{
+  "pays": "Maroc",
+  "drapeau": "🇲🇦",
+  "symbole": "🔵",
+  "titre": "L'Évasion Bleue de Chefchaouen",
+  "budget_total": "2650€",
+  "duree": "9 jours",
+  "temps_vol": "28h depuis Julien, haiti avec escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et premières touches de bleu",
+      "legende": "Après un long voyage, l'arrivée à Chefchaouen est une bouffée d'air frais. Installez-vous tranquillement et laissez-vous imprégner par l'atmosphère unique de la ville bleue. Une balade légère en fin de journée sera parfaite pour une première découverte sans précipitation.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🛬 <strong>Transfert vers Chefchaouen</strong>: Après l'atterrissage à Tanger, un grand taxi ou un bus vous mènera à travers les montagnes du Rif jusqu'à la ville bleue, un trajet pittoresque d'environ 2h30.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Prenez le temps de vous installer dans votre hôtel 3 étoiles, de vous rafraîchir et de vous détendre après le voyage. Profitez de l'ambiance sereine de votre hébergement.",
+        "🚶‍♂️ <strong>Première balade dans la Médina</strong>: Une courte promenade en fin d'après-midi pour sentir l'énergie de la médina. Laissez-vous guider par les ruelles bleues et admirez les façades uniques."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil d'arrivée",
+          "texte": "Pré-réservez votre transfert de Tanger à Chefchaouen pour une arrivée plus sereine. Les \"grands taxis\" sont une option confortable et partagée."
+        },
+        {
+          "symbole": "💡",
+          "titre": "Monnaie locale",
+          "texte": "La monnaie est le Dirham marocain (MAD). Prévoyez un peu de liquide pour les petits achats et les pourboires, bien que les cartes soient acceptées dans de nombreux endroits."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "💙",
+      "titre": "Immersion au cœur de la Médina bleue",
+      "legende": "Plongez au cœur de la médina de Chefchaouen, un labyrinthe de ruelles peintes en bleu et blanc. Chaque coin de rue révèle une nouvelle perspective, un détail architectural ou une scène de vie locale. Laissez-vous charmer par l'authenticité de ce lieu hors du temps.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🏰 <strong>Visite de la Kasbah et de son musée</strong>: Explorez l'ancienne forteresse du 18ème siècle, un havre de paix au cœur de la médina. Son musée ethnographique offre un aperçu fascinant de l'histoire et de la culture locale.",
+        "🚶‍♀️ <strong>Exploration des ruelles emblématiques</strong>: Perdez-vous volontairement dans les célèbres ruelles bleues comme la rue \"El Assri\". C'est l'occasion parfaite pour des photos mémorables et pour découvrir des boutiques d'artisans cachées.",
+        "☕ <strong>Pause sur la Place Outa el Hammam</strong>: Détendez-vous sur la place principale, le cœur battant de Chefchaouen. Savourez un thé à la menthe en observant l'animation locale, avec la Grande Mosquée et la Kasbah en toile de fond."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Astuce photo",
+          "texte": "Les meilleures heures pour photographier la médina sont tôt le matin ou en fin d'après-midi, lorsque la lumière est douce et les rues moins fréquentées."
+        },
+        {
+          "symbole": "🚶",
+          "titre": "Chaussures confortables",
+          "texte": "Prévoyez des chaussures confortables car vous marcherez beaucoup sur des pavés et des pentes. La médina est un terrain de jeu pour les pieds!"
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "⛰️",
+      "titre": "Panoramas et sources naturelles",
+      "legende": "Après l'exploration urbaine, prenez de la hauteur pour admirer Chefchaouen sous un autre angle. La nature environnante offre des vues imprenables et des lieux de fraîcheur. Une journée entre effort doux et récompense visuelle.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🕌 <strong>Randonnée à la Mosquée Espagnole</strong>: Montez jusqu'à cette mosquée abandonnée pour un panorama spectaculaire sur toute la ville bleue, surtout au coucher du soleil. La vue est à couper le souffle et l'effort en vaut la peine.",
+        "💧 <strong>Visite de Ras El Maa</strong>: Découvrez la source d'eau naturelle de Ras El Maa, où les femmes lavent leur linge et les habitants se rafraîchissent. C'est un lieu de vie authentique et paisible, juste à la sortie de la médina.",
+        "🍽️ <strong>Dîner avec vue</strong>: Choisissez un restaurant avec terrasse offrant une vue sur la médina illuminée. C'est une expérience magique pour clôturer la journée, savourant des plats locaux sous les étoiles."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🌅",
+          "titre": "Coucher de soleil",
+          "texte": "Le coucher de soleil depuis la Mosquée Espagnole est un incontournable. Prévoyez d'y arriver environ 45 minutes avant pour trouver une bonne place."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "N'oubliez pas d'emporter de l'eau, surtout si vous faites la randonnée vers la Mosquée Espagnole. Le soleil peut être intense."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🎨",
+      "titre": "Artisanat et saveurs locales",
+      "legende": "Immergez-vous dans l'artisanat local et la gastronomie marocaine. Cette journée est dédiée à la découverte des talents des artisans de Chefchaouen et à l'apprentissage des secrets de sa cuisine savoureuse. Une expérience sensorielle et enrichissante.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🛍️ <strong>Découverte des souks et ateliers d'artisans</strong>: Flânez dans les souks où vous trouverez des produits uniques comme des tapis berbères, des poteries, des vêtements en laine et des articles en cuir. N'hésitez pas à observer les artisans au travail.",
+        "🖼️ <strong>Visite de galeries d'art locales</strong>: Chefchaouen attire de nombreux artistes. Explorez les petites galeries qui exposent des œuvres inspirées par la ville bleue et les paysages du Rif. C'est une belle façon de soutenir l'art local.",
+        "🧑‍🍳 <strong>Cours de cuisine marocaine</strong>: Participez à un atelier pour apprendre à préparer des plats traditionnels comme le tajine ou le couscous. C'est une expérience interactive et délicieuse qui vous permettra de ramener un peu du Maroc chez vous."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": " bargaining",
+          "titre": "Négociation",
+          "texte": "La négociation est une tradition dans les souks. N'hésitez pas à marchander poliment pour obtenir le meilleur prix, c'est une partie de l'expérience."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Spécialités locales",
+          "texte": "Goûtez au \"bissara\" (soupe de fèves) pour le petit-déjeuner et au \"brochettes\" (brochettes de viande) pour un repas rapide et savoureux."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏞️",
+      "titre": "Évasion naturelle à Akchour",
+      "legende": "Échappez à l'agitation de la ville pour une journée d'aventure en pleine nature. Les cascades et le Pont de Dieu d'Akchour offrent un cadre idyllique pour la randonnée et la baignade. Une bouffée d'air frais et des paysages à couper le souffle vous attendent.",
+      "lieu": "Akchour (excursion depuis Chefchaouen)",
+      "activites": [
+        "🚗 <strong>Excursion vers Akchour</strong>: Prenez un grand taxi partagé depuis Chefchaouen pour rejoindre Akchour, situé à environ 45 minutes. Le trajet offre déjà de superbes vues sur les montagnes du Rif.",
+        "🚶‍♀️ <strong>Randonnée aux cascades d'Akchour</strong>: Partez en randonnée le long de la rivière pour découvrir les magnifiques cascades. Il existe plusieurs niveaux de difficulté, des petites cascades accessibles aux grandes cascades nécessitant plus d'effort.",
+        "🌉 <strong>Découverte du Pont de Dieu</strong>: Pour les plus aventureux, continuez la randonnée jusqu'au \"Pont de Dieu\", une arche rocheuse naturelle impressionnante. Prévoyez de bonnes chaussures et de l'eau."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🏊",
+          "titre": "Baignade",
+          "texte": "N'oubliez pas votre maillot de bain! Les piscines naturelles au pied des cascades sont parfaites pour se rafraîchir après la randonnée."
+        },
+        {
+          "symbole": "🥪",
+          "titre": "Repas sur place",
+          "texte": "De petits restaurants locaux le long du chemin proposent des tajines et des brochettes. C'est une excellente option pour un déjeuner authentique en pleine nature."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🧘",
+      "titre": "Détente et exploration photographique",
+      "legende": "Après l'aventure d'Akchour, cette journée est dédiée à la détente et à l'approfondissement de votre exploration de Chefchaouen. Prenez le temps de capturer l'essence de la ville à travers votre objectif et de vous offrir un moment de bien-être traditionnel.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "☕ <strong>Matinée libre et café local</strong>: Profitez d'une matinée tranquille pour vous reposer, lire un livre ou simplement savourer un café marocain dans un des charmants cafés de la médina. Observez la vie locale s'éveiller.",
+        "📸 <strong>Balade photographique thématique</strong>: Choisissez un thème (portes, chats, détails architecturaux) et partez à la chasse aux images. Chefchaouen est un paradis pour les photographes, chaque ruelle offre une nouvelle inspiration.",
+        "🧖‍♀️ <strong>Expérience Hammam traditionnel</strong>: Offrez-vous un moment de relaxation et de purification dans un hammam public ou privé. C'est une expérience culturelle authentique pour se détendre et se ressourcer."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🐈",
+          "titre": "Les chats de Chefchaouen",
+          "texte": "La ville est réputée pour ses nombreux chats. Ils font partie intégrante du paysage et sont souvent très photogéniques. N'hésitez pas à les immortaliser!"
+        },
+        {
+          "symbole": "🧼",
+          "titre": "Hammam",
+          "texte": "Si vous optez pour un hammam public, prévoyez votre propre serviette, savon noir et gant de \"kessa\". Pour une expérience plus douce, un hammam privé est une bonne alternative."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🥕",
+      "titre": "Marché local et saveurs authentiques",
+      "legende": "Plongez dans l'effervescence du marché local, un véritable festival de couleurs, d'odeurs et de sons. C'est l'occasion de découvrir les produits frais de la région et de goûter à la cuisine de rue. Une journée pour éveiller vos sens et vous connecter à la vie quotidienne.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🥕 <strong>Visite du marché hebdomadaire (si jour de marché)</strong>: Si votre séjour coïncide avec le jour de marché (généralement le lundi ou le jeudi), ne manquez pas cette expérience vibrante. Vous y trouverez des produits frais, des épices et de l'artisanat local.",
+        "🌶️ <strong>Dégustation de street food</strong>: Laissez-vous tenter par les délices de la cuisine de rue. Goûtez aux \"harira\" (soupe), aux \"msemen\" (crêpes) ou aux pâtisseries locales. C'est une façon économique et savoureuse de manger.",
+        "📖 <strong>Soirée contes et légendes</strong>: Cherchez un café ou un riad proposant des soirées contes. C'est une tradition marocaine fascinante qui vous plongera dans l'imaginaire local et les récits du Rif."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🗓️",
+          "titre": "Jours de marché",
+          "texte": "Renseignez-vous sur les jours de marché locaux à votre arrivée. C'est une expérience authentique à ne pas manquer pour observer la vie locale."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Quelques mots d'arabe",
+          "texte": "Apprendre quelques mots comme \"Salam Alikoum\" (bonjour) ou \"Choukran\" (merci) sera très apprécié par les habitants et facilitera les échanges."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🎁",
+      "titre": "Derniers souvenirs et adieux bleus",
+      "legende": "Profitez de cette dernière journée complète pour flâner une dernière fois dans vos endroits préférés, dénicher les derniers souvenirs et savourer l'ambiance unique de Chefchaouen. Une journée pour graver ces moments bleus dans votre mémoire avant le départ.",
+      "lieu": "Chefchaouen",
+      "activites": [
+        "🛍️ <strong>Shopping de dernière minute</strong>: Retournez dans les souks pour acheter les cadeaux et souvenirs que vous n'avez pas encore trouvés. Les couvertures en laine, les babouches et les épices sont des incontournables.",
+        "☕ <strong>Revisiter un café ou un point de vue préféré</strong>: Prenez le temps de vous asseoir dans votre café favori ou de retourner à un point de vue qui vous a marqué. Imprégnez-vous une dernière fois de l'atmosphère.",
+        " farewell <strong>Dîner d'adieu avec musique locale</strong>: Choisissez un restaurant offrant de la musique traditionnelle marocaine pour votre dernier dîner. C'est une belle façon de célébrer votre voyage et de dire au revoir à Chefchaouen."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "📦",
+          "titre": "Bagages",
+          "texte": "Pensez à la place dans vos bagages pour vos souvenirs. Certains articles peuvent être volumineux, comme les tapis."
+        },
+        {
+          "symbole": "⭐",
+          "titre": "Avis et pourboires",
+          "texte": "Si vous avez apprécié un service ou un restaurant, n'hésitez pas à laisser un pourboire ou un avis positif. C'est toujours très apprécié."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛫",
+      "titre": "Départ de la ville bleue",
+      "legende": "C'est le moment de quitter la magnifique ville bleue de Chefchaouen. Après un dernier petit-déjeuner marocain, vous prendrez la route vers l'aéroport de Tanger, emportant avec vous des souvenirs inoubliables de ce voyage enchanteur.",
+      "lieu": "Chefchaouen / Tanger",
+      "activites": [
+        "🥐 <strong>Dernier petit-déjeuner marocain</strong>: Savourez un dernier petit-déjeuner composé de \"harcha\", \"baghrir\" et thé à la menthe. C'est une douce manière de dire au revoir à la gastronomie locale.",
+        "🚗 <strong>Transfert vers l'aéroport de Tanger</strong>: Organisez votre transfert retour vers l'aéroport de Tanger (TNG) en grand taxi ou en bus. Prévoyez suffisamment de temps pour le trajet et les formalités aéroportuaires.",
+        "🛫 <strong>Vol retour</strong>: Embarquement pour votre vol retour, la tête remplie d'images bleues et de souvenirs précieux de votre aventure marocaine."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Confirmez l'heure de votre transfert la veille et assurez-vous d'avoir une marge confortable pour éviter tout stress lié au départ."
+        },
+        {
+          "symbole": "🛂",
+          "titre": "Formalités",
+          "texte": "Vérifiez les exigences de votre compagnie aérienne concernant les bagages et les documents de voyage avant de partir pour l'aéroport."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1600€/pers (Vol A/R Julien, Haïti - Tanger en classe économique avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "230€/pers (Transferts aéroport, taxis locaux, excursion Akchour)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "270€/pers (3 repas/jour, budget moyen, incluant quelques extras)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "400€/pers (8 nuits en hôtel 3 étoiles)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "150€/pers (Entrées sites, cours de cuisine, hammam, imprévus)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'avril, mai, septembre et octobre.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population de Chefchaouen est majoritairement berbère et arabe, réputée pour son hospitalité et sa gentillesse. Un sourire et quelques mots d'arabe ouvriront bien des portes.",
+      "symbole": "🤝"
+    },
+    {
+      "titre": "Le Maroc est un pays d'Afrique du Nord, connu pour sa culture riche, ses paysages variés et son histoire millénaire. Chefchaouen est un joyau niché dans les montagnes du Rif.",
+      "symbole": "🌍"
+    },
+    {
+      "titre": "L'origine de la couleur bleue de Chefchaouen est sujette à plusieurs théories: pour repousser les moustiques, pour symboliser le ciel et le paradis, ou par tradition juive. Quelle que soit la raison, elle est devenue son identité.",
+      "symbole": "💙"
+    },
+    {
+      "titre": "Chefchaouen est également surnommée la \"ville des chats\". Vous en croiserez à chaque coin de rue, faisant partie intégrante du charme local.",
+      "symbole": "🐈"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations touristiques officielles sur le Maroc",
+      "titre": "Visit Morocco",
+      "url": "https://www.visitmorocco.com/fr",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météorologiques pour Chefchaouen",
+      "titre": "Météo Maroc",
+      "url": "https://www.meteomaroc.com/",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Convertisseur de devises pour le Dirham marocain",
+      "titre": "XE Currency Converter",
+      "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=EUR&To=MAD",
+      "symbole": "💱"
+    }
+  ]
+}
